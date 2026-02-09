@@ -1,0 +1,6 @@
+$PKG_NAME NEWS -- history of user-visible changes.
+
+Please send $PKG_NAME bug reports to <$AUTHOR_EMAIL>.
+* Major changes in release $PKG_VERSION ($COPYRIGHT_YEAR-MM-DD) [alpha]
+  - Initial release of the $PKG_NAME structure.
+  - Basic build system configuration using Autotools.

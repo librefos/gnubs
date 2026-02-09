@@ -1,0 +1,276 @@
+------------------------------------------------------------------------
+gnubs - GNU Build System Automation & Template
+------------------------------------------------------------------------
+
+[ PT-BR ] Documentação um Português
+========================================================================
+
+gnubs é uma ferramenta de automação de configuração para o Sistema de
+Build GNU (Autotools). Ele atua como um gerador de template, criando
+automaticamente uma estrutura de projeto alinhada com os padrões
+Free/Open Source da GNU.
+
+O objetivo não é ser apenas um esqueleto passivo, mas sim uma automação
+que configura todo o boilerplate necessário (Makefiles, scripts de
+configuração, versionamento) para que você possa focar apenas no código
+do seu projeto, sem precisar compilar configurações complexas
+manualmente.
+
+--- Funcionalidades de Automação ---------------------------------------
+
+Este projeto automatiza a adesão aos Padrões de Código GNU:
+
+  Configuração Zero (Boilerplate):
+    Entrega arquivos 'configure.ac' e 'Makefile.am' pré-configurados e
+    funcionais, prontos para uso e expansão.
+
+  Versionamento Dinâmico Automatizado:
+    Integração automática com o Git ('git-version-gen'). O número da
+    versão do projeto é atualizado automaticamente baseado nas tags do
+    repositório, eliminando edição manual de arquivos.
+
+  Geração Automática de ChangeLog:
+    Converte o histórico de commits do Git em um arquivo 'ChangeLog'
+    formatado no padrão GNU automaticamente durante o empacotamento.
+
+  Conformidade Padrão Automática:
+    As saídas de '--help' e '--version' já vêm implementadas via módulo
+    'version-etc' da Gnulib.
+
+  Geração de Documentação:
+    Automação via 'help2man' cria páginas de manual (man pages) a partir
+    da saída do executável.
+
+--------------------------------------- Funcionalidades de Automação ---
+--- Pré-requisitos -----------------------------------------------------
+
+Para executar a automação e inicializar o template, você precisa das
+seguintes ferramentas instaladas:
+
+  - Autoconf (>= 2.71)
+  - Automake (>= 1.14)
+  - Libtool
+  - Gettext (>= 0.19)
+  - Texinfo e Help2man
+  - Git
+  - Gperf (opcional)
+
+Debian:
+
+  # apt-get install autoconf automake libtool gettext texinfo help2man \
+                    git gperf
+
+Archlinux:
+
+  # pacman -S autoconf automake libtool gettext texinfo help2man git \
+              gperf
+
+----------------------------------------------------- Pré-requisitos ---
+--- Inicializando a Automação ------------------------------------------
+
+Como este é um projeto de automação de configuração, o processo abaixo
+serve para inicializar o template e verificar se o ambiente está
+corretamente configurado.
+
+  1. Inicializar:
+
+     $ ./bootstrap
+
+     Este comando baixa as dependências de portabilidade (Gnulib) e gera
+     os scripts de configuração automática.
+
+  2. Configurar o Projeto:
+
+     $ ./configure
+
+     Verifica as ferramentas do sistema e prepara o template.
+
+  3. Verificar o Template:
+
+     $ make
+
+     Como o foco é a configuração, este passo gera os arquivos finais e
+     verifica se a automação está correta.
+
+  4. Validar a Estrutura:
+
+     $ make check
+
+     Executa os testes integrados para garantir que a automação gerou um
+     projeto compatível com os padrões GNU.
+
+------------------------------------------ Inicializando a Automação ---
+--- Instalação do Template ---------------------------------------------
+
+Se desejar instalar o resultado desta automação no sistema (como base
+para outros usos ou referência):
+
+  # make install
+
+--------------------------------------------- Instalação do Template ---
+--- Gerando um Release (Empacotamento) ---------------------------------
+
+A principal função desta automação é facilitar a distribuição. Para
+gerar um tarball pronto para distribuição:
+
+  1. Crie a tag da versão (Opcional - a automação detecta):
+
+     $ git tag -a v1.0.0 -m 'Release v1.0.0'
+
+  2. Gere o pacote verificado:
+
+     $ make distcheck
+
+     O comando 'distcheck' valida toda a automação, garantindo que o
+     'ChangeLog' foi gerado e que o projeto é portável.
+
+Resultado: Cria o arquivo 'gnubs-1.0.0.tar.gz' pronto para envio.
+
+--------------------------------- Gerando um Release (Empacotamento) ---
+--- Licença ------------------------------------------------------------
+
+Copyright (C) 2026 Thiago C. Silva
+
+Este programa é software livre: você pode redistribuí-lo e/ou
+modificá-lo sob os termos da Licença Pública Geral GNU conforme
+publicada pela Free Software Foundation, seja a versão 3 da Licença, ou
+(a seu critério) qualquer versão posterior.
+
+Veja o arquivo 'COPYING' para detalhes completos da licença.
+
+------------------------------------------------------------ Licença ---
+
+[ EN ] English Documentation
+========================================================================
+
+gnubs is a configuration automation tool for the GNU Build System
+(Autotools). It acts as a template generator, automatically creating a
+project structure aligned with GNU Free/Open Source standards.
+
+Its goal is not to be a passive skeleton, but an automation tool that
+configures all necessary boilerplate (Makefiles, config scripts,
+versioning) so you can focus solely on your code, without manually
+handling complex compilations or configurations.
+
+--- Automation Features ------------------------------------------------
+
+This project automates adherence to GNU Coding Standards:
+
+  Zero Configuration (Boilerplate):
+    Delivers pre-configured and functional 'configure.ac' and
+    'Makefile.am' files, ready for use and expansion.
+
+  Automated Dynamic Versioning:
+    Automatic integration with Git ('git-version-gen'). The project
+    version number is automatically updated based on repository tags,
+    eliminating manual file editing.
+
+  Automated ChangeLog Generation:
+    Converts Git commit history into a GNU-formatted 'ChangeLog' file
+    automatically during packaging.
+
+  Automatic Standard Compliance:
+    '--help' and '--version' outputs are pre-implemented via Gnulib's
+    'version-etc' module.
+
+  Documentation Generation:
+    Automation via 'help2man' creates man pages from executable output.
+
+------------------------------------------------ Automation Features ---
+--- Prerequisites ------------------------------------------------------
+
+To run the automation and initialize the template, you need the
+following tools installed:
+
+  - Autoconf (>= 2.71)
+  - Automake (>= 1.14)
+  - Libtool
+  - Gettext (>= 0.19)
+  - Texinfo and Help2man
+  - Git
+  - Gperf (optional)
+
+Debian:
+
+  # apt-get install autoconf automake libtool gettext texinfo help2man \
+                    git gperf
+
+Archlinux:
+
+  # pacman -S autoconf automake libtool gettext texinfo help2man git \
+              gperf
+
+------------------------------------------------------ Prerequisites ---
+--- Initializing the Automation ----------------------------------------
+
+As this is a configuration automation project, the process below serves
+to initialize the template and verify that the environment is correctly
+configured.
+
+  1. Bootstrap:
+
+     $ ./bootstrap
+
+     This command downloads portability dependencies (Gnulib) and
+     generates the automatic configuration scripts.
+
+  2. Configure the Project:
+
+     $ ./configure
+
+     Checks system tools and prepares the template.
+
+  3. Verify the Template (No Heavy Compilation):
+
+     $ make
+
+     As the focus is configuration, this step generates final files and
+     verifies if the automation is correct.
+
+  4. Validate Structure:
+
+     $ make check
+
+     Runs integrated tests to ensure the automation generated a
+     GNU-compliant project.
+
+----------------------------------------- Initializing the Automation ---
+--- Installing the Template --------------------------------------------
+
+If you wish to install the result of this automation to the system (as
+a base for other uses or reference):
+
+  # make install
+
+-------------------------------------------- Installing the Template ---
+--- Generating a Release (Packaging) -----------------------------------
+
+The main function of this automation is to facilitate distribution. To
+generate a distribution-ready tarball:
+
+  1. Tag the version (Optional - automation detects it):
+
+    $ git tag -a v1.0.0 -m 'Release v1.0.0'
+
+  2. Generate the verified package:
+
+     $ make distcheck
+
+     The 'distcheck' command validates the entire automation, ensuring
+     the 'ChangeLog' was generated and the project is portable.
+
+Result: Creates the 'gnubs-1.0.0.tar.gz' file ready for shipping.
+
+----------------------------------- Generating a Release (Packaging) ---
+--- License ------------------------------------------------------------
+
+Copyright (C) 2026 Thiago C. Silva
+
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation, either version 3 of the License, or (at your
+option) any later version.
+
+See the 'COPYING' file for full license details.
+
+------------------------------------------------------------ License ---

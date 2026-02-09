@@ -1,0 +1,11 @@
+$PKG_NAME ChangeLog
+
+The ChangeLog for this project is automatically generated from the Git
+commit history. If you are viewing this file in a release tarball,
+something went wrong during the distribution generation process.
+
+If you are viewing this file in the Git repository, please run:
+
+    git log --stat
+
+to view the detailed history of changes.

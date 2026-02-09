@@ -1,0 +1,45 @@
+# Compilation Artifacts (Compiler & Linker)
+*.o
+*.lo
+*.la
+*.a
+
+# GNU Autoconf - Configuration Artifacts
+configure
+config.*
+autom4te.cache/
+*.log
+
+# GNU Automake - Makefiles and Build Support
+Makefile.in
+Makefile
+.deps/
+.dirstamp
+install-sh
+missing
+depcomp
+build-aux/
+m4/
+aclocal.m4
+*.trs
+
+# GNU Libtool - Shared Library Support
+libtool
+ltmain.sh
+.libs/
+lib/
+
+# Distribution & Documentation
+stamp-*
+version.texi
+*.tar.gz
+*.tar.xz
+.tarball-version
+$PKG_TARNAME
+
+# Miscellaneous / Editors
+*~
+*.swp
+*.asc
+*.info
+guild/

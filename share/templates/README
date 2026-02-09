@@ -1,0 +1,34 @@
+Introduction
+============
+
+$PKG_NAME is a project designed to... [Add specific details here].
+
+This project uses the GNU Build System (Autotools).
+
+Installation
+============
+
+See the file 'INSTALL' for general compilation instructions.
+
+Briefly, the shell commands `./configure; make; make install` should
+configure, build, and install this package.
+
+The following configure options are specific to $PKG_NAME:
+
+  --enable-debug  Enable debugging flags
+
+Building from Git
+=================
+
+If you are building from the Git repository (rather than a release
+tarball), you must first generate the build system infrastructure:
+
+  ./bootstrap
+  ./configure
+  make
+
+Reporting Bugs
+==============
+
+Report bugs to <$AUTHOR_EMAIL> or visit the project homepage at:
+$PKG_URL
