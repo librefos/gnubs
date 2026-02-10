@@ -159,4 +159,4 @@ main()
   inform 'success' 'Scaffolding complete'
   exit 0
 }
-main "$@"
+main
