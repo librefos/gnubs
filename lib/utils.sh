@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # utils.sh - Collection of utility functions.
-# Copyright (C) $COPYRIGHT_YEAR  $AUTHOR_NAME
+# Copyright (C) 2026  Thiago C. Silva
 # 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -35,11 +35,11 @@ inform() {
   esac
 
   mapfile -t COPYRIGHT <<EOF
-Copyright (C) 2026 $AUTHOR_NAME
+Copyright (C) 2026 Thiago C. Silva
 License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
-Report bugs to: $AUTHOR_EMAIL
+Report bugs to: librefos@hotmail.com
 EOF
 
   if [[ "$type" = 'copyright' ]]; then
