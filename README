@@ -1,9 +1,4 @@
-------------------------------------------------------------------------
-gnubs - GNU Build System Automation & Template
-------------------------------------------------------------------------
-
-[ PT-BR ] Documentação um Português
-========================================================================
+--- PT-BR --------------------------------------------------------------
 
 gnubs é uma ferramenta de automação de configuração para o Sistema de
 Build GNU (Autotools). Ele atua como um gerador de template, criando
@@ -140,8 +135,8 @@ Veja o arquivo 'COPYING' para detalhes completos da licença.
 
 ------------------------------------------------------------ Licença ---
 
-[ EN ] English Documentation
-========================================================================
+-------------------------------------------------------------- PT-BR ---
+--- English ------------------------------------------------------------
 
 gnubs is a configuration automation tool for the GNU Build System
 (Autotools). It acts as a template generator, automatically creating a
@@ -274,3 +269,5 @@ option) any later version.
 See the 'COPYING' file for full license details.
 
 ------------------------------------------------------------ License ---
+
+------------------------------------------------------------ English ---
