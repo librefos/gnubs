@@ -17,4 +17,4 @@ $PKG_TARNAME.1: $(top_builddir)/src/$PKG_TARNAME$(EXEEXT)
 		echo 'WARNING: Cannot run binary to generate man page' >&2; \
 	fi
 
-MAINTAINERCLEANFILES = $PKG_TARNAME.1
+DISTCLEANFILES = $PKG_TARNAME.1
